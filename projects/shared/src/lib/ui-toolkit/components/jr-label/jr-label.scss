@@ -1,0 +1,12 @@
+@reference "tailwindcss";
+
+:host {
+    @apply text-sm font-medium;
+    label {
+        @apply cursor-pointer;
+    }
+}
+
+.jr-label__descriptor {
+    @apply font-normal capitalize;
+}

@@ -1,0 +1,15 @@
+<label [attr.for]="for() ? for() : null">
+    @if(text()) { 
+        {{ text() }}
+    } @else {
+        <ng-content></ng-content>
+    }
+    <span class="jr-label__descriptor">
+        @if (required()) {
+        (required)
+        }
+        @if (optional()) {
+            (optional)
+        }
+    </span>
+</label>
