@@ -1,26 +1,149 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors');
 module.exports = {
   content: [
     "./projects/shared/src/lib/**/*.{html,ts,scss}",
     "./projects/ui-documentation/src/**/*.{html,ts,scss}"
   ],
   theme: {
+    colors: {
+      inherit: colors.inherit,
+      current: colors.current,
+      transparent: colors.transparent,
+      black: colors.black,
+      white: colors.white,
+      slate: colors.slate,
+      gray: colors.gray,
+      zinc: colors.zinc,
+      neutral: colors.neutral,
+      stone: colors.stone,
+      red: colors.red,
+      orange: colors.orange,
+      amber: colors.amber,
+      yellow: colors.yellow,
+      lime: colors.lime,
+      green: colors.green,
+      emerald: colors.emerald,
+      teal: colors.teal,
+      cyan: colors.cyan,
+      sky: colors.sky,
+      blue: colors.blue,
+      indigo: colors.indigo,
+      violet: colors.violet,
+      purple: colors.purple,
+      fuchsia: colors.fuchsia,
+      pink: colors.pink,
+      rose: colors.rose,
+    },
     extend: {
       colors: {
-        dark: {
-          50:  "#f9f9fa",
-          100: "#ececec",
-          200: "#d9d9d9",
-          300: "#bfbfbf",
-          400: "#999999",
-          500: "#666666",
-          600: "#4d4d4d",
-          700: "#333333",
-          800: "#1a1a1a",
-          900: "#0a0a0a"
+        'dark': {
+          '50': '#F5F4F5',
+          '100': '#E7E5E9',
+          '200': '#D8D4D9',
+          '300': '#B8B3B8',
+          '400': '#9B969B',
+          '500': '#8D878D',
+          '600': '#706A70',
+          '700': '#5C565C',
+          '800': '#474247',
+          '900': '#332F33',
+          '950': '#1F1C1F'
+        },
+        'gray': {
+          '50': '#F9F9FA',
+          '100': '#F4F5F6',
+          '200': '#EAEBED',
+          '300': '#DFE1E3',
+          '400': '#D5D8DA',
+          '500': '#C1C4C8',
+          '600': '#ADB1B6',
+          '700': '#999EA3',
+          '800': '#7B7F83',
+          '900': '#5C5F62',
+          '950': '#3D3F41'
+        },
+        'gold': {
+          '50': '#FEFAF5',
+          '100': '#FFF9F1',
+          '200': '#FFF2E3',
+          '300': '#FFE9CF',
+          '400': '#FFDFBB',
+          '500': '#FAD5A9',
+          '600': '#F5CB93',
+          '700': '#FAC476',
+          '800': '#FFB350',
+          '900': '#FAA300',
+          '950': '#CB7915'
+        },
+        'blue': {
+          '50': '#E7ECF1',
+          '100': '#E1E7EE',
+          '200': '#C5D1DD',
+          '300': '#ABBBCC',
+          '400': '#93A6BB',
+          '500': '#7D92AA',
+          '600': '#687F98',
+          '700': '#556D87',
+          '800': '#445C76',
+          '900': '#273C53',
+          '950': '#203143'
+        },
+        'plum': {
+          '50': '#EBE4EC',
+          '100': '#D8CAD9',
+          '200': '#C5B1C6',
+          '300': '#B19AB3',
+          '400': '#9E849F',
+          '500': '#8B708C',
+          '600': '#785C79',
+          '700': '#654A66',
+          '800': '#523A53',
+          '900': '#3F2A40',
+          '950': '#322233'
+        },
+        'green': {
+          '50': '#EAF2EA',
+          '100': '#D6E5D5',
+          '200': '#C3D8C2',
+          '300': '#B1CBAF',
+          '400': '#A0BE9E',
+          '500': '#8FB18D',
+          '600': '#80A47D',
+          '700': '#71976E',
+          '800': '#638A60',
+          '900': '#557C52',
+          '950': '#446442'
+        },
+        'red': {
+          '50': '#F7E6E5',
+          '100': '#EFCECC',
+          '200': '#E7B7B4',
+          '300': '#DFA29D',
+          '400': '#D78D88',
+          '500': '#D07A73',
+          '600': '#C86760',
+          '700': '#C0564E',
+          '800': '#B8463D',
+          '900': '#AF352D',
+          '950': '#9E3129'
+        },
+        'teal': {
+          '50': '#EDF6F6',
+          '100': '#DCECED',
+          '200': '#CBE3E4',
+          '300': '#BBDADB',
+          '400': '#ABD0D2',
+          '500': '#9DC7C9',
+          '600': '#8FBEC1',
+          '700': '#81B5B8',
+          '800': '#75ACAF',
+          '900': '#68A2A5',
+          '950': '#497274'
         }
-      }
-    }
+      },
+    },
   },
   plugins: [],
 };
