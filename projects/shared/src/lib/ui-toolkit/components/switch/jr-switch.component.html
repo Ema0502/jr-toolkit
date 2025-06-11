@@ -1,0 +1,15 @@
+<label [for]="id()" 
+       [attr.data.testId]="id()" 
+       [attr.aria.label]="ariaLabel()" 
+       [class]="labelClass()" 
+       class="jr-c-switch__label" 
+       (click)="toggle()">
+    <ng-content />
+    <input [id]="id()" 
+           type="checkbox"
+           role="switch"
+           [checked]="_inOn"
+           [disabled]="_isDisabled"
+           class="peer jr-c-switch__checkbox">
+    <div class="jr-c-switch__switch"></div>
+</label>

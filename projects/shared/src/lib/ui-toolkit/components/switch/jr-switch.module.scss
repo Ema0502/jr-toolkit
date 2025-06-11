@@ -1,0 +1,29 @@
+.jr-c-switch {
+    &__label {
+        @apply flex justify-between gap-2 cursor-pointer;
+    
+        &__before {
+            @apply flex-row;
+        }
+
+        &__after {
+            @apply flex-row-reverse;
+        }
+    }
+
+    &__checkbox {
+        @apply sr-only;
+    }
+
+    &__switch {
+        @apply relative w-12 h-6 rounded-3xl dark:bg-dark-500 transition duration-300 ease-in-out;
+        @apply hover:outline-none hover:ring-2 hover:ring-dark-900;
+        @apply peer-focus-visible:outline-none peer-focus-visible:ring-2;
+        @apply peer-focus-visible:ring-dark-900 peer-focus-visible:ring-offset-2;
+        @apply peer-checked:after:translate-x-[150%] rtl:peer-checked:after:-translate-x-[150%] after:transition-all;
+        @apply peer-checked:after:border-white peer-checked:bg-sky-500;
+        @apply peer-disabled:opacity-60 peer-disabled:ring-0 peer-disabled:cursor-not-allowed;
+        @apply after:content-[''] after:absolute after:top-[0.25rem] after:start-[0.25rem];
+        @apply after:bg-gray-100 after:border after:rounded-full after:h-4 after:w-4;
+    }
+}
