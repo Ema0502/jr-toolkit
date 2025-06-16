@@ -1,0 +1,18 @@
+<nav class="navbar">
+  <button
+    class="navbar__button"
+    (click)="selectCategory(this.componentCategory.Components)">
+    Components
+  </button>
+  <button
+    class="navbar__button"
+    (click)="selectCategory(this.componentCategory.Services)">
+    Services
+  </button>
+  <button
+    class="navbar__button"
+    (click)="selectCategory(this.componentCategory.Data)">
+    Data
+  </button>
+</nav>
+<router-outlet />
