@@ -1,7 +1,15 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/shared",
+  "deleteDestPath": false,
   "lib": {
-    "entryFile": "src/public-api.ts"
-  }
+    "entryFile": "src/public-api.ts",
+    "styleIncludePaths": [
+      "src/lib"
+    ]
+  },
+  "assets": [
+    "src/lib/tailwind.scss",
+    "src/lib/ui-toolkit/components/**/*.scss"
+  ]
 }
