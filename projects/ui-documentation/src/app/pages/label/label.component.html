@@ -1,0 +1,76 @@
+<article class="label-detail">
+  <h1 class="label-detail__title">Label Component</h1>
+  <p class="label-detail__description">
+    The <code>&lt;jr-label&gt;</code> component displays text or content and optionally adds a descriptor
+    <code>(required)</code> or <code>(optional)</code>.
+  </p>
+
+  <h2 class="label-detail__subtitle">Example</h2>
+
+  <section class="label-detail__example">
+    <h4>With explicit text</h4>
+    <jr-label [for]="'name'" [text]="'With explicit text'"></jr-label>
+  </section>
+
+  <section class="label-detail__example">
+    <h4>(required)</h4>
+    <jr-label for="campo3" [text]="'Email'" [required]="true"></jr-label>
+  </section>
+
+  <section class="label-detail__example">
+    <h4>(optional)</h4>
+    <jr-label for="campo4" [text]="'Phone'" [optional]="true"></jr-label>
+  </section>
+
+  <section class="label-detail__props">
+    <h2 class="label-detail__subtitle">Props</h2>
+    <table class="props-table">
+      <thead>
+        <tr><th>Name</th><th>Type</th><th>Description</th></tr>
+      </thead>
+      <tbody>
+        @for (prop of props; track prop.name; let i = $index) {
+          <tr>
+            <td><code>{{ prop.name }}</code></td>
+            <td><code>{{ prop.type }}</code></td>
+            <td>{{ prop.description }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </section>
+
+  <section class="label-detail__code-viewer">
+    <h2 class="label-detail__subtitle">Code Examples</h2>
+    <div class="label-detail__buttons">
+      <button (click)="showHtmlFn()">HTML</button>
+      <button (click)="showTsFn()">TS</button>
+    </div>
+    @if (showHtml()){
+    <pre><code>
+    <!-- HTML -->
+    &lt;jr-label
+          [for]="'name'"
+          [text]="'name test'"
+          [optional]="true"
+          [required]="true"
+          &gt;
+    &lt;/jr-label&gt;
+        </code></pre>
+    }
+    @if (showTs()){
+    <pre><code>
+    <!-- TS -->
+    import &#123; LabelComponent &#125; from '&#64;jr-toolkit';
+       &#64;Component&#40;&#123;
+       ...
+        imports: &#91;
+          ...
+          LabelComponent
+        &#93;,
+        ...
+      &#125;&#41;
+        </code></pre>
+    }
+  </section>
+</article>
