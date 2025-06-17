@@ -1,11 +1,13 @@
+import { CommonModule } from '@angular/common';
 import { Component, computed, ElementRef, forwardRef, input, output, viewChild } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'jr-switch',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './jr-switch.component.html',
-  styleUrls: ['./jr-switch.module.scss'],
+  styleUrls: ['./jr-switch.component.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,

@@ -1,6 +1,9 @@
 {
   "name": "jr-toolkit",
-  "version": "0.1.0",
+  "version": "0.1.3",
+  "scripts": {
+    "build:tailwind": "postcss projects/shared/src/lib/ui-toolkit/components/**/*.scss --dir projects/shared/src/lib/ui-toolkit/components --ext .css"
+  },
   "peerDependencies": {
     "@angular/common": "^20.0.0",
     "@angular/core": "^20.0.0"

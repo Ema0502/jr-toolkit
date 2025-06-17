@@ -1,0 +1,44 @@
+.switch-detail {
+  @apply border-l-2 border-gray-900 p-6;
+}
+
+.switch-detail__title {
+  @apply text-[1.75rem] mb-2;
+}
+
+.switch-detail__description {
+  @apply mb-6 leading-6;
+}
+
+.switch-detail__subtitle {
+  @apply text-xl mt-4 mb-2;
+}
+
+.switch-detail__example {
+  @apply mb-8;
+}
+
+.switch-detail__example jr-switch {
+  @apply mt-2;
+}
+
+.switch-detail__button {
+  @apply bg-white hover:bg-gray-300 font-semibold py-2 px-8 mx-2 border border-gray-400 rounded shadow;
+}
+
+.switch-detail__props {
+  @apply overflow-x-auto;
+}
+
+.switch-detail__props .props-table {
+  @apply w-full border-collapse;
+}
+
+.switch-detail__props .props-table th,
+.switch-detail__props .props-table td {
+  @apply border border-gray-300 p-2 text-left;
+}
+
+.switch-detail__props .props-table th {
+  @apply bg-gray-100;
+}

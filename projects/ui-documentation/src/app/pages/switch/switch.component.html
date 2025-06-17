@@ -1,0 +1,101 @@
+<article class="switch-detail">
+  <h1 class="switch-detail__title">Switch Component</h1>
+  <p class="switch-detail__description">
+    The <code>&lt;jr-switch&gt;</code> component toggles between two states—on and off.
+    It is ideal for settings, preferences, and binary choices.
+  </p>
+
+  <h2 class="switch-detail__subtitle">Example</h2>
+  <h4>Active</h4>
+  <section class="switch-detail__example">
+    <jr-switch id="exampleTrue" [isOn]="true" ariaLabel="Enable notifications"></jr-switch>
+  </section>
+  <h4>Deactive</h4>
+  <section class="switch-detail__example">
+    <jr-switch id="exampleFalse" [isOn]="false" ariaLabel="Enable notifications"></jr-switch>
+  </section>
+  <h4>Disabled</h4>
+  <section class="switch-detail__example">
+    <jr-switch id="exampleDisabledTrue" [isOn]="true" [isDisabled]="true" ariaLabel="Enable notifications"></jr-switch>
+    <br>
+    <jr-switch id="exampleDisabledFalse" [isOn]="false" [isDisabled]="true"
+      ariaLabel="Enable notifications"></jr-switch>
+  </section>
+  <section class="switch-detail__example">
+    <jr-switch id="example" [isOn]="true" ariaLabel="Enable notifications">
+      <span>Label position before</span>
+    </jr-switch>
+  </section>
+  <section class="switch-detail__example">
+    <jr-switch id="example2" [isOn]="true" [labelPosition]="'after'" ariaLabel="Enable notifications">
+      <span>Label position after</span>
+    </jr-switch>
+  </section>
+  <section class="switch-detail__props">
+    <h2 class="switch-detail__subtitle">Props</h2>
+    <table class="props-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (prop of props; track prop.name; let i = $index) {
+          <tr>
+            <td><code>{{ prop.name }}</code></td>
+            <td><code>{{ prop.type }}</code></td>
+            <td>{{ prop.description }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </section>
+  <br>
+  <section class="switch-detail__code-viewer">
+    <h2 class="switch-detail__subtitle">Code Examples</h2>
+    <table class="code-table">
+      <tr>
+        <button class="switch-detail__button" (click)="showHtmlFn()">
+          HTML
+        </button>
+        <button class="switch-detail__button" (click)="showTsFn()">
+          TS
+        </button>
+      </tr>
+      <tr>
+        <td colspan="2">
+          @if (showHtml()) {
+          <pre><code>
+  <!-- HTML -->
+  &lt;form [formGroup]="myForm" (ngSubmit)="onSubmit()"&gt;
+    &lt;jr-switch id="idTest"
+               [isOn]="true"
+               [isDisabled]="true"
+               [labelPosition]="'after'"
+               formControlName="notifications"
+               ariaLabel="Notifications"&gt;
+            &lt;span&gt;Switch on to receive notifications: &lt;/span&gt;
+    &lt;/jr-switch&gt;
+          </code></pre>
+          }
+          @if (showTs()) {
+          <pre><code>
+  <!-- TS -->
+   import &#123; SwitchComponent &#125; from '&#64;jr-toolkit';
+   &#64;Component&#40;&#123;
+   ...
+    imports: &#91;
+      ...
+      SwitchComponent
+    &#93;,
+    ...
+  &#125;&#41;
+          </code></pre>
+          }
+        </td>
+      </tr>
+    </table>
+  </section>
+</article>

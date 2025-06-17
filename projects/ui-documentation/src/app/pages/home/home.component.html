@@ -1,0 +1,24 @@
+<div class="home flex">
+  <aside class="home__sidebar">
+    @if (selectedCategory(); as category) {
+      <h3>{{ category }}</h3>
+      <ul>
+        @for (comp of componentsList[category]; track comp) {
+          <li>
+            <button
+              class="home__item"
+              (click)="selectComponent(comp)">
+              {{ comp }}
+            </button>
+          </li>
+        }
+      </ul>
+    }
+  </aside>
+
+  <main class="home__main">
+    @if (selectedComponentName(); as compName) {
+      <ng-container *ngComponentOutlet="componentMap[compName]"></ng-container>
+    }
+  </main>
+</div>

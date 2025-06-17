@@ -1,14 +1,16 @@
-import { 
-  booleanAttribute, 
-  Component, 
-  HostBinding, 
+import { CommonModule } from '@angular/common';
+import {
+  booleanAttribute,
+  Component,
+  HostBinding,
   input } from '@angular/core';
 
 @Component({
   selector: 'jr-label',
-  imports: [],
-  templateUrl: './jr-label.html',
-  styleUrls: ['./jr-label.scss']
+  standalone: true,
+  imports: [CommonModule],
+  templateUrl: './jr-label.component.html',
+  styleUrls: ['./jr-label.component.scss']
 })
 export class LabelComponent {
   @HostBinding('class') get hostClasses(): string {
