@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LabelComponent } from './jr-label';
+import { LabelComponent } from './jr-label.component';
 
-describe('JrLabelComponent', () => {
+describe('LabelComponent', () => {
   let component: LabelComponent;
   let fixture: ComponentFixture<LabelComponent>;
 

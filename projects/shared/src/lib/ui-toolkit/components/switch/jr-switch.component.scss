@@ -1,7 +1,9 @@
+@import 'tailwind';
+
 .jr-c-switch {
     &__label {
         @apply flex justify-between gap-2 cursor-pointer;
-    
+
         &__before {
             @apply flex-row;
         }
